@@ -96,14 +96,17 @@ def main():
     
     
     out = add_frequencies(d, filename, remove_case) # calls the add_frequencies function for the -l flag
-    if flag == '-l':
+     if flag == '-l':
         out2={}
-        for char in inputChar:
-            out2[char]=out[char]                    # stores the given command for -l flag into out2 dictionary and compares it to the out[] to see if they both have same characters
-        printColumn(out2)                       # if -l flag characters and out[] dictionary characters match, the funtion prints out the frequency of the out2[] dictionary characters.
+        if inputChar != 'test.txt':
+          for char in inputChar:
+              out2[char]=out[char]                # stores the given command for -l flag into out2 dictionary and compares it to the out[] to see if they both have same characters
+        else:
+          out2 = out
+        printColumn(out2)                         # if -l flag characters and out[] dictionary characters match, the funtion prints out the frequency of the out2[] dictionary characters.
     else:
-        printColumn(out)                                  # if there are no characters specified for the -l flag, the system just prints out the frequencies of the all the characters in the .txt file. 
-    
+        printColumn(out)                          # if there are no characters specified for the -l flag, the system just prints out the frequencies of the all the characters in the .txt file.
+        
 
-if __name__=="__main__":                            # check if the main() function is in the primary file and if it is true then it runs the main function. 
+if __name__=="__main__":                          # check if the main() function is in the primary file and if it is true then it runs the main function. 
     main()
