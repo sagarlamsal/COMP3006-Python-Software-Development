@@ -5,7 +5,9 @@ Created on Mon Feb 15 22:56:57 2021
 
 @author: sagarlamsal
 """
-
+# Sagar Lamsal
+#COMP3006: Python Software Development
+#Project 3
 # Card Game: Object Oriented Programming
 import random
 
